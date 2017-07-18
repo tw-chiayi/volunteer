@@ -1,0 +1,262 @@
+extends layout
+
+block content
+  // Header
+  header
+      .container
+          .intro-text
+              .intro-lead-in 燈會志工
+              .intro-heading 需要你的一臂之力
+              a.page-scroll.btn.btn-xl(href="/join") 馬上加入
+  // Services Section
+  section#services
+      .container
+          .row
+              .col-lg-12.text-center
+                  h2.section-heading 燈會志工服務
+                  h3.section-subheading.text-muted 燈會志工需要協助什麼
+          .row.text-center
+              .col-md-4
+                  span.fa-stack.fa-4x
+                      i.fa.fa-circle.fa-stack-2x.text-primary
+                      i.fa.fa-shopping-cart.fa-stack-1x.fa-inverse
+                  h4.service-heading 攝影
+                  p.text-muted
+                      //- | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+              .col-md-4
+                  span.fa-stack.fa-4x
+                      i.fa.fa-circle.fa-stack-2x.text-primary
+                      i.fa.fa-laptop.fa-stack-1x.fa-inverse
+                  h4.service-heading 遊客服務台
+                  p.text-muted
+                      //- | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+              .col-md-4
+                  span.fa-stack.fa-4x
+                      i.fa.fa-circle.fa-stack-2x.text-primary
+                      i.fa.fa-lock.fa-stack-1x.fa-inverse
+                  h4.service-heading 燈區介紹
+                  p.text-muted
+                      //- | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+  //- // Portfolio Grid Section
+  //- section#portfolio.bg-light-gray
+  //-     .container
+  //-         .row
+  //-             .col-lg-12.text-center
+  //-                 h2.section-heading Portfolio
+  //-                 h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+  //-         .row
+  //-             .col-md-4.col-sm-6.portfolio-item
+  //-                 a.portfolio-link(href="#portfolioModal1", data-toggle="modal")
+  //-                     .portfolio-hover
+  //-                         .portfolio-hover-content
+  //-                             i.fa.fa-plus.fa-3x
+  //-                     img.img-responsive(src="img/portfolio/roundicons.png", alt="")
+  //-                 .portfolio-caption
+  //-                     h4 Round Icons
+  //-                     p.text-muted Graphic Design
+  //-             .col-md-4.col-sm-6.portfolio-item
+  //-                 a.portfolio-link(href="#portfolioModal2", data-toggle="modal")
+  //-                     .portfolio-hover
+  //-                         .portfolio-hover-content
+  //-                             i.fa.fa-plus.fa-3x
+  //-                     img.img-responsive(src="img/portfolio/startup-framework.png", alt="")
+  //-                 .portfolio-caption
+  //-                     h4 Startup Framework
+  //-                     p.text-muted Website Design
+  //-             .col-md-4.col-sm-6.portfolio-item
+  //-                 a.portfolio-link(href="#portfolioModal3", data-toggle="modal")
+  //-                     .portfolio-hover
+  //-                         .portfolio-hover-content
+  //-                             i.fa.fa-plus.fa-3x
+  //-                     img.img-responsive(src="img/portfolio/treehouse.png", alt="")
+  //-                 .portfolio-caption
+  //-                     h4 Treehouse
+  //-                     p.text-muted Website Design
+  //-             .col-md-4.col-sm-6.portfolio-item
+  //-                 a.portfolio-link(href="#portfolioModal4", data-toggle="modal")
+  //-                     .portfolio-hover
+  //-                         .portfolio-hover-content
+  //-                             i.fa.fa-plus.fa-3x
+  //-                     img.img-responsive(src="img/portfolio/golden.png", alt="")
+  //-                 .portfolio-caption
+  //-                     h4 Golden
+  //-                     p.text-muted Website Design
+  //-             .col-md-4.col-sm-6.portfolio-item
+  //-                 a.portfolio-link(href="#portfolioModal5", data-toggle="modal")
+  //-                     .portfolio-hover
+  //-                         .portfolio-hover-content
+  //-                             i.fa.fa-plus.fa-3x
+  //-                     img.img-responsive(src="img/portfolio/escape.png", alt="")
+  //-                 .portfolio-caption
+  //-                     h4 Escape
+  //-                     p.text-muted Website Design
+  //-             .col-md-4.col-sm-6.portfolio-item
+  //-                 a.portfolio-link(href="#portfolioModal6", data-toggle="modal")
+  //-                     .portfolio-hover
+  //-                         .portfolio-hover-content
+  //-                             i.fa.fa-plus.fa-3x
+  //-                     img.img-responsive(src="img/portfolio/dreams.png", alt="")
+  //-                 .portfolio-caption
+  //-                     h4 Dreams
+  //-                     p.text-muted Website Design
+  // About Section
+  section#about.bg-light-gray
+      .container
+          .row
+              .col-lg-12.text-center
+                  h2.section-heading 燈會志工時程
+                  h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+          .row
+              .col-lg-12
+                  ul.timeline
+                      li
+                          .timeline-image
+                              //- img.img-circle.img-responsive(src="img/about/1.jpg", alt="")
+                          .timeline-panel
+                              .timeline-heading
+                                  h4 2017/07 ~ 2017/10 
+                                  h4.subheading 招募志工
+                              .timeline-body
+                                  p.text-muted
+                                      | 
+                      li.timeline-inverted
+                          .timeline-image
+                              //- img.img-circle.img-responsive(src="img/about/2.jpg", alt="")
+                          .timeline-panel
+                              .timeline-heading
+                                  h4 2017/10 ~ 2018/01
+                                  h4.subheading 志工訓練
+                              .timeline-body
+                                  p.text-muted
+                                      | 
+                      li
+                          .timeline-image
+                              //- img.img-circle.img-responsive(src="img/about/3.jpg", alt="")
+                          .timeline-panel
+                              .timeline-heading
+                                  h4 2018/02 燈會期間
+                                  h4.subheading 進行服務
+                              .timeline-body
+                                  p.text-muted
+                                      | 
+                      //- li.timeline-inverted
+                      //-     .timeline-image
+                      //-         img.img-circle.img-responsive(src="img/about/4.jpg", alt="")
+                      //-     .timeline-panel
+                      //-         .timeline-heading
+                      //-             h4 July 2014
+                      //-             h4.subheading Phase Two Expansion
+                      //-         .timeline-body
+                      //-             p.text-muted
+                      //-                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                      //- li.timeline-inverted
+                      //-     .timeline-image
+                      //-         h4
+                      //-             | Be Part
+                      //-             br
+                      //-             | Of Our
+                      //-             br
+                      //-             | Story!
+  //- // Team Section
+  //- section#team.bg-light-gray
+  //-     .container
+  //-         .row
+  //-             .col-lg-12.text-center
+  //-                 h2.section-heading Our Amazing Team
+  //-                 h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+  //-         .row
+  //-             .col-sm-4
+  //-                 .team-member
+  //-                     img.img-responsive.img-circle(src="img/team/1.jpg", alt="")
+  //-                     h4 Kay Garland
+  //-                     p.text-muted Lead Designer
+  //-                     ul.list-inline.social-buttons
+  //-                         li
+  //-                             a(href="#")
+  //-                                 i.fa.fa-twitter
+  //-                         li
+  //-                             a(href="#")
+  //-                                 i.fa.fa-facebook
+  //-                         li
+  //-                             a(href="#")
+  //-                                 i.fa.fa-linkedin
+  //-             .col-sm-4
+  //-                 .team-member
+  //-                     img.img-responsive.img-circle(src="img/team/2.jpg", alt="")
+  //-                     h4 Larry Parker
+  //-                     p.text-muted Lead Marketer
+  //-                     ul.list-inline.social-buttons
+  //-                         li
+  //-                             a(href="#")
+  //-                                 i.fa.fa-twitter
+  //-                         li
+  //-                             a(href="#")
+  //-                                 i.fa.fa-facebook
+  //-                         li
+  //-                             a(href="#")
+  //-                                 i.fa.fa-linkedin
+  //-             .col-sm-4
+  //-                 .team-member
+  //-                     img.img-responsive.img-circle(src="img/team/3.jpg", alt="")
+  //-                     h4 Diana Pertersen
+  //-                     p.text-muted Lead Developer
+  //-                     ul.list-inline.social-buttons
+  //-                         li
+  //-                             a(href="#")
+  //-                                 i.fa.fa-twitter
+  //-                         li
+  //-                             a(href="#")
+  //-                                 i.fa.fa-facebook
+  //-                         li
+  //-                             a(href="#")
+  //-                                 i.fa.fa-linkedin
+  //-         .row
+  //-             .col-lg-8.col-lg-offset-2.text-center
+  //-                 p.large.text-muted
+  //-                     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+  // Clients Aside
+  //- aside.clients
+  //-     .container
+  //-         .row
+  //-             .col-md-3.col-sm-6
+  //-                 a(href="#")
+  //-                     img.img-responsive.img-centered(src="img/logos/envato.jpg", alt="")
+  //-             .col-md-3.col-sm-6
+  //-                 a(href="#")
+  //-                     img.img-responsive.img-centered(src="img/logos/designmodo.jpg", alt="")
+  //-             .col-md-3.col-sm-6
+  //-                 a(href="#")
+  //-                     img.img-responsive.img-centered(src="img/logos/themeforest.jpg", alt="")
+  //-             .col-md-3.col-sm-6
+  //-                 a(href="#")
+  //-                     img.img-responsive.img-centered(src="img/logos/creative-market.jpg", alt="")
+  // Contact Section
+  //- section#contact
+  //-     .container
+  //-         .row
+  //-             .col-lg-12.text-center
+  //-                 h2.section-heading Contact Us
+  //-                 h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+  //-         .row
+  //-             .col-lg-12
+  //-                 form#contactForm(name="sentMessage", novalidate="")
+  //-                     .row
+  //-                         .col-md-6
+  //-                             .form-group
+  //-                                 input#name.form-control(type="text", placeholder="Your Name *", required="", data-validation-required-message="Please enter your name.")
+  //-                                 p.help-block.text-danger
+  //-                             .form-group
+  //-                                 input#email.form-control(type="email", placeholder="Your Email *", required="", data-validation-required-message="Please enter your email address.")
+  //-                                 p.help-block.text-danger
+  //-                             .form-group
+  //-                                 input#phone.form-control(type="tel", placeholder="Your Phone *", required="", data-validation-required-message="Please enter your phone number.")
+  //-                                 p.help-block.text-danger
+  //-                         .col-md-6
+  //-                             .form-group
+  //-                                 textarea#message.form-control(placeholder="Your Message *", required="", data-validation-required-message="Please enter a message.")
+  //-                                 p.help-block.text-danger
+  //-                         .clearfix
+  //-                         .col-lg-12.text-center
+  //-                             #success
+  //-                             button.btn.btn-xl(type="submit") Send Message
+  

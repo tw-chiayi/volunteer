@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  section#services
+      .container
+          .row
+              .col-lg-12.text-center
+                  h2.section-heading 志工報名
+                  h3.section-subheading.text-muted 請選擇您的報名類別
+          .row.text-center
+              .col-xs-4.col-xs-offset-2
+                  a(href="/join/single")
+                    span.fa-stack.fa-4x
+                        i.fa.fa-circle.fa-stack-2x.text-primary
+                        i.fa.fa-shopping-cart.fa-stack-1x.fa-inverse
+                    h4.service-heading(style='color:black;') 個人報名
+                    p.text-muted
+                      //- | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+              .col-xs-4
+                  a(href="/join/group")
+                    span.fa-stack.fa-4x
+                        i.fa.fa-circle.fa-stack-2x.text-primary
+                        i.fa.fa-laptop.fa-stack-1x.fa-inverse
+                    h4.service-heading(style='color:black;') 團體報名
+                    p.text-muted
+                      //- | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+  
