@@ -4,12 +4,46 @@ block content
   section#services
     .container
       form(action="/",method="post")
+        
         .form-group
-            label(for="exampleInputEmail1") Email address
-            input#exampleInputEmail1.form-control(type="email", placeholder="Email")
+            label(for="exampleInputName") 姓名
+            p.help-block
+            input#exampleInputName(type="", placeholder="姓名")
+        .form-group
+            label
+                input(type="radio")
+                |  男
+            label
+                input(type="radio")
+                |  女
+        .form-group
+            label(for="exampleInputIDNumber") 身份證字號(保險用)
+            p.help-block
+            input#exampleInputIDNumber(type="", placeholder="身份證字號")
+        .form-group
+            label 出生年月日(保險用)
+            p.help-block
+            input(type="date")
+        .form-group
+            label(for="exampleInputAddress") 聯絡地址
+            p.help-block
+            input(type="", placeholder="")
+        .form-group
+            label(for="exampleInputTelephoneNumber") 市話
+            p.help-block
+            input#exampleInputTelephoneNumber(type="", placeholder="市話")
+        .form-group
+            label(for="exampleInputMobileNumber") 手機
+            p.help-block
+            input#exampleInputMobileNumber(type="", placeholder="09##-###-###")
+        .form-group
+            label(for="exampleInputEmail1") Email
+            p.help-block
+            input#exampleInputEmail1(type="email", placeholder="Email")
         .form-group
             label(for="exampleInputPassword1") Password
-            input#exampleInputPassword1.form-control(type="password", placeholder="Password")
+            p.help-block
+            input#exampleInputPassword1(type="password", placeholder="Password")
         .form-group
             label(for="exampleInputFile") File input
             input#exampleInputFile(type="file")
@@ -20,6 +54,3 @@ block content
                 |  Check me out
         button.btn.btn-default(type="submit") Submit
         
-            
-    script.
-        alert("hi");
