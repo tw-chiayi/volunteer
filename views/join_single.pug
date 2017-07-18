@@ -188,8 +188,8 @@ block content
             input(type="radio", name="YesNo", value="no")
             | 否
         .form-group
-            label(for="Occupation") 可服務天數(請務必填選)
-            br
+            label(for="Dates") 可服務天數(請務必填選)
+            p
             select(name="Dates")
                 option(value="occasionally") 1-3天
                 option(value="sometimes") 4-6天
@@ -197,18 +197,23 @@ block content
                 option(value="usually") 10天以上
                 option(value="always") 每天都可
         .form-group
-            label(for="Occupation") 時段(請務必填選)
-            br
-            select(name="Time")
-                option(value="morning") 早班：09：00～14：00（5小時）
-                option(value="afternoon") 午班：13：30～18：30（5小時）
-                option(value="night") 晚班：18：00～23：00（5小時）
-        .form-group(action="", method="")
+            label 時段(請務必填選)
+            .form-group
+                |  早班：09：00～14：00（5小時）
+                input(type="checkbox", name="Time")
+                br
+                |  午班：13：30～18：30（5小時）
+                input(type="checkbox", name="Time")
+                br
+                |  晚班：18：00～23：00（5小時）
+                input(type="checkbox", name="Time")
+        .form-group
             label 時間(請務必填選)
-            br
-            input(type="radio", name="Time", value="weekdays")
-            | 平日
-            input(type="radio", name="Time", value="holiday")
-            | 假日
+            .form-group
+                |  平日
+                input(type="checkbox", name="Day")
+                br
+                |  假日
+                input(type="checkbox", name="Day")
         button.btn.btn-default(type="submit") 提交
         
