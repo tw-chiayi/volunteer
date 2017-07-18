@@ -6,51 +6,209 @@ block content
       form(action="/",method="post")
         
         .form-group
-            label(for="exampleInputName") 姓名
+            label(for="Name") 姓名
             p.help-block
-            input#exampleInputName(type="", placeholder="姓名")
+            input#Name(name="Name", type="text", placeholder="")
+        .form-group(action="", method="")
+            label 性別
+            br
+            input(type="radio", name="Sex", value="Male")
+            | 男 
+            input(type="radio", name="Sex", value="Female")
+            | 女
         .form-group
-            label
-                input(type="radio")
-                |  男
-            label
-                input(type="radio")
-                |  女
-        .form-group
-            label(for="exampleInputIDNumber") 身份證字號(保險用)
-            p.help-block
-            input#exampleInputIDNumber(type="", placeholder="身份證字號")
+            label(for="IdNumber") 身份證字號(保險用)
+            br
+            input#IdNumber(name="IdNumber", type="text", placeholder="")
         .form-group
             label 出生年月日(保險用)
-            p.help-block
-            input(type="date")
+            br
+            input(name="Birthday", type="date")
         .form-group
-            label(for="exampleInputAddress") 聯絡地址
-            p.help-block
-            input(type="", placeholder="")
+            label(for="Address") 聯絡地址
+            br
+            input#address(type="text",name="Address")
         .form-group
-            label(for="exampleInputTelephoneNumber") 市話
-            p.help-block
-            input#exampleInputTelephoneNumber(type="", placeholder="市話")
+            label(for="TelephoneNumber") 市話
+            br
+            input#TelephoneNumber(name="TelephoneNumber", type="text", placeholder="")
         .form-group
-            label(for="exampleInputMobileNumber") 手機
-            p.help-block
-            input#exampleInputMobileNumber(type="", placeholder="09##-###-###")
+            label(for="MobileNumber") 手機
+            br
+            input#MobileNumber(name="MobileNumber", type="text", placeholder="09##-###-###")
         .form-group
-            label(for="exampleInputEmail1") Email
-            p.help-block
-            input#exampleInputEmail1(type="email", placeholder="Email")
+            label(for="Email1") Email
+            br
+            input#Email(name="Email", type="email", placeholder="#####@#####.com")
         .form-group
-            label(for="exampleInputPassword1") Password
-            p.help-block
-            input#exampleInputPassword1(type="password", placeholder="Password")
+            label 特殊專長
+            br
+            textarea#Expertise(name="Expertise", type="text", placeholder="英文, 日語, 客家語, 原住民語, 手語, 幼保, 攝影/錄影, 緊急救護, 其他...")
         .form-group
-            label(for="exampleInputFile") File input
-            input#exampleInputFile(type="file")
-            p.help-block Example block-level help text here.
-        .checkbox
-            label
-                input(type="checkbox")
-                |  Check me out
-        button.btn.btn-default(type="submit") Submit
+            label(for="Group") 服務組別(請依志願序填寫，1為第一志願，2為第二志願，以此類推，請至少填寫6個以上志願以利排班)
+            br
+            | 志工服務組(聯合服務台): 
+            select(name="Order1")
+                option(value="one") 1
+                option(value="two") 2
+                option(value="three") 3
+                option(value="four") 4
+                option(value="five") 5
+                option(value="six") 6
+                option(value="seven") 7
+                option(value="eight") 8
+                option(value="nine") 9
+                option(value="ten") 10
+            br
+            | 環保組(環境保護局): 
+            select(name="Order2")
+                option(value="one") 1
+                option(value="two") 2
+                option(value="three") 3
+                option(value="four") 4
+                option(value="five") 5
+                option(value="six") 6
+                option(value="seven") 7
+                option(value="eight") 8
+                option(value="nine") 9
+                option(value="ten") 10
+            br
+            | 交通運輸組(建設處): 
+            select(name="Order3")
+                option(value="one") 1
+                option(value="two") 2
+                option(value="three") 3
+                option(value="four") 4
+                option(value="five") 5
+                option(value="six") 6
+                option(value="seven") 7
+                option(value="eight") 8
+                option(value="nine") 9
+                option(value="ten") 10
+            br
+            | 行政協調組(行政處): 
+            select(name="Order4")
+                option(value="one") 1
+                option(value="two") 2
+                option(value="three") 3
+                option(value="four") 4
+                option(value="five") 5
+                option(value="six") 6
+                option(value="seven") 7
+                option(value="eight") 8
+                option(value="nine") 9
+                option(value="ten") 10
+            br
+            | 燈區服務(民政處): 
+            select(name="Order5")
+                option(value="one") 1
+                option(value="two") 2
+                option(value="three") 3
+                option(value="four") 4
+                option(value="five") 5
+                option(value="six") 6
+                option(value="seven") 7
+                option(value="eight") 8
+                option(value="nine") 9
+                option(value="ten") 10
+            br
+            | 宣傳行銷組(新聞行銷處): 
+            select(name="Order6")
+                option(value="one") 1
+                option(value="two") 2
+                option(value="three") 3
+                option(value="four") 4
+                option(value="five") 5
+                option(value="six") 6
+                option(value="seven") 7
+                option(value="eight") 8
+                option(value="nine") 9
+                option(value="ten") 10
+            br
+            | 醫療救護組/菸害防制(衛生局): 
+            select(name="Order7")
+                option(value="one") 1
+                option(value="two") 2
+                option(value="three") 3
+                option(value="four") 4
+                option(value="five") 5
+                option(value="six") 6
+                option(value="seven") 7
+                option(value="eight") 8
+                option(value="nine") 9
+                option(value="ten") 10
+            br
+            | 在地特色燈區組 (文化觀光局): 
+            select(name="Order8")
+                option(value="one") 1
+                option(value="two") 2
+                option(value="three") 3
+                option(value="four") 4
+                option(value="five") 5
+                option(value="six") 6
+                option(value="seven") 7
+                option(value="eight") 8
+                option(value="nine") 9
+                option(value="ten") 10
+            br
+            | 節目表演組(表藝中心): 
+            select(name="Order9")
+                option(value="one") 1
+                option(value="two") 2
+                option(value="three") 3
+                option(value="four") 4
+                option(value="five") 5
+                option(value="six") 6
+                option(value="seven") 7
+                option(value="eight") 8
+                option(value="nine") 9
+                option(value="ten") 10
+            br
+            | 科技資訊組(綜規處): 
+            select(name="Order10")
+                option(value="one") 1
+                option(value="two") 2
+                option(value="three") 3
+                option(value="four") 4
+                option(value="five") 5
+                option(value="six") 6
+                option(value="seven") 7
+                option(value="eight") 8
+                option(value="nine") 9
+                option(value="ten") 10
+        .form-group
+            label(for="Occupation") 職業(學生請填寫校系名)
+            br
+            input#Occupation(name="Occupation", type="text", placeholder="")
+        .form-group(action="", method="")
+            label 是否持有志願服務紀錄冊
+            br
+            input(type="radio", name="YesNo", value="yes")
+            | 是
+            input(type="radio", name="YesNo", value="no")
+            | 否
+        .form-group
+            label(for="Occupation") 可服務天數(請務必填選)
+            br
+            select(name="Dates")
+                option(value="occasionally") 1-3天
+                option(value="sometimes") 4-6天
+                option(value="often") 7-10天
+                option(value="usually") 10天以上
+                option(value="always") 每天都可
+        .form-group
+            label(for="Occupation") 時段(請務必填選)
+            br
+            select(name="Time")
+                option(value="morning") 早班：09：00～14：00（5小時）
+                option(value="afternoon") 午班：13：30～18：30（5小時）
+                option(value="night") 晚班：18：00～23：00（5小時）
+        .form-group(action="", method="")
+            label 時間(請務必填選)
+            br
+            input(type="radio", name="Time", value="weekdays")
+            | 平日
+            input(type="radio", name="Time", value="holiday")
+            | 假日
+        button.btn.btn-default(type="submit") 提交
         
