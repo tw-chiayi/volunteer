@@ -10,6 +10,11 @@ router.get('/', function(req, res, next) {
 
 router.get("/join",(req,res,next)=>{
   res.render('join', { title: '加入志工 | ' + TITLE });
+});
+
+
+router.get("/join/single",(req,res,next)=>{
+  res.render('join_single', { title: '個人報名 | 加入志工 | ' + TITLE });
 })
 
 module.exports = router;
