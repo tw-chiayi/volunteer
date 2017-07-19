@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-
 var TITLE = "2017 燈會志工系統";
 
 /* GET home page. */
@@ -15,6 +14,16 @@ router.get("/join",(req,res,next)=>{
 
 router.get("/join/single",(req,res,next)=>{
   res.render('join_single', { title: '個人報名 | 加入志工 | ' + TITLE });
-})
+});
+
+router.post("/join/single_submiting",(req,res,next)=>{
+
+  //請修改這裡
+  console.log(req.body);
+  res.send(req.body);
+  // res.render('join_single', { title: '個人報名 | 加入志工 | ' + TITLE });
+});
+
+
 
 module.exports = router;
