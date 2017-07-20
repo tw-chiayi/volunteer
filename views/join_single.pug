@@ -251,5 +251,11 @@ block content
                 br
                 |  假日
                 input(type="checkbox", name="day", value="0")
-      
+        .form-group
+            label 特殊專長
+             .form-group
+                each val,key in ["英文","日語","客家語","原住民語","手語","幼保","攝影/錄影","緊急救護"]
+                    span=val
+                    input(type="checkbox", name="expertise", value=(key+1))
+                    br
         button.btn.btn-default(type="submit") 提交
