@@ -25,19 +25,66 @@ router.post("/join/single_submiting",(req,res,next)=>{
 
   //"Name":"123","IdNumber":"","Birthday":"","Address":"","TelephoneNumber
   
-  return res.send(req.body);
+  //return res.send(req.body);
 
   var { name,sex,identify,birthday,address,telephonenumber,mobilenumber,email,expertise,group,occupation,hasbook,dates,time,day } = req.body;
 
-  console.log([ Name,IdNumber,Birthday,Address]);
+  console.log([ name,sex,identify,birthday,address,telephonenumber,mobilenumber,email,expertise,group,occupation,hasbook,dates,time,day]);
+
+  var labels = {
+    1:"志工服務組(聯合服務台)",
+    2:"環保組(環境保護局)",
+    3:"交通運輸組(建設處)",
+    4:"行政協調組(行政處)",
+    5:"燈區服務(民政處)",
+    6:"宣傳行銷組(新聞行銷處)",
+    7:"醫療救護組/菸害防制(衛生局)",
+    8:"在地特色燈區組 (文化觀光局)",
+    9:"節目表演組(表藝中心)",
+    10:"科技資訊組(綜規處)"
+  };
+
+  var groups = [];
+  for(var i = 1 ; i <= 10 ; ++i){
+    if(req.body["group"+i]){
+      groups.push({
+        label:labels[i],
+        index:req.body["group"+i]
+      });  
+    }
+  } 
+
+  var group_result= [];
+  for(var i = 1; i <= 10; ++i)
+  {
+    for(var j = groups.length-1; j >= 0; --j){
+      if (i == groups[j].index){
+        group_result.push(groups[j].label);
+      }
+    }
+  }
 
   model.insert_item({
-      name:Name,
-      identify:IdNumber,
-      birthday:Birthday,
-      address:Address
+      name:name,
+      sex:sex,
+      identify:identify,
+      birthday:birthday,
+      address:address,
+      telephonenumber:telephonenumber,
+      mobilenumber:mobilenumber,
+      email:email,
+      expertise:expertise,
+      group:group_result.join(","),
+      occupation:occupation,
+      hasbook:hasbook,
+      dates:dates,
+      time:time,
+      day:day
+  }).then(()=>{},(err)=>{
+    console.log(err);
   });
-  res.send("送出完成:"+Name);
+  
+  res.send("送出完成:"+name+sex);
   // res.render('join_single', { title: '個人報名 | 加入志工 | ' + TITLE });
 });
 
