@@ -39,7 +39,36 @@ block content
         .form-group
             label(for="Email1") Email
             br
-            input#Email(name="email", type="email", placeholder="#####@#####.com")
+            input#Email(name="email", type="email", placeholder="#####@#####.com") 
+            .form-group
+            label 特殊專長
+             .form-group
+                |  英文
+                input(type="checkbox", name="expertise", value="1")
+                br
+                |  日語
+                input(type="checkbox", name="expertise", value="2")
+                br
+                |  客家語
+                input(type="checkbox", name="expertise", value="3")
+                br
+                |  原住民語
+                input(type="checkbox", name="expertise", value="4")
+                br
+                |  手語
+                input(type="checkbox", name="expertise", value="5")
+                br
+                |  幼保
+                input(type="checkbox", name="expertise", value="6")
+                br
+                |  攝影/錄影
+                input(type="checkbox", name="expertise", value="7")
+                br
+                |  緊急救護
+                input(type="checkbox", name="expertise", value="8")
+                br
+                label(for="Name") 其他
+                input#Expertise(name="expertise", type="text", placeholder="")
         .form-group
             label(for="group") 服務組別(請依志願序填寫，1為第一志願，2為第二志願，以此類推，請至少填寫6個以上志願以利排班)
             br
@@ -222,30 +251,5 @@ block content
                 br
                 |  假日
                 input(type="checkbox", name="day", value="0")
-        .form-group
-            label 特殊專長
-             .form-group
-                |  英文
-                input(type="checkbox", name="expertise", value="1")
-                br
-                |  日語
-                input(type="checkbox", name="expertise", value="2")
-                br
-                |  客家語
-                input(type="checkbox", name="expertise", value="3")
-                br
-                 |  原住民語
-                input(type="checkbox", name="expertise", value="4")
-                br
-                 |  手語
-                input(type="checkbox", name="expertise", value="5")
-                br
-                 |  幼保
-                input(type="checkbox", name="expertise", value="6")
-                br
-                 |  攝影/錄影
-                input(type="checkbox", name="expertise", value="7")
-                br
-                 |  緊急救護
-                input(type="checkbox", name="expertise", value="8")
+      
         button.btn.btn-default(type="submit") 提交
