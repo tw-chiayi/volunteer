@@ -14,6 +14,9 @@ router.get("/join",(req,res,next)=>{
   res.render('join', { title: '加入志工 | ' + TITLE });
 });
 
+router.get("/join/group",(req,res,next)=>{
+  res.render('join_group', { title: '團體報名 | 加入志工 | ' + TITLE });
+});
 
 router.get("/join/single",(req,res,next)=>{
   res.render('join_single', { title: '個人報名 | 加入志工 | ' + TITLE });

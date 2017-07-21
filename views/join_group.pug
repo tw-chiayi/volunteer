@@ -1,0 +1,222 @@
+extends layout
+
+block content
+  section#services
+    .container
+      form(action="/join/single_submiting",method="post")
+        
+        .form-group
+            label 單位類別
+            br
+            input(type="radio", name="unitcategory", value="1")
+            | 已備案志工隊 
+            input(type="radio", name="unitcategory", value="2")
+            | 企業
+            input(type="radio", name="unitcategory", value="3")
+            | 學校 
+            label(for="UnitCategory") 其他
+            input#UnitCategory(name="unitcategory", type="text", placeholder="")
+        .form-group
+            label(for="UnitName") 單位名稱
+            br
+            input#UnitName(name="unitname", type="text", placeholder="")
+        .form-group
+            label(for="Name") 承辦人
+            br
+            input#Name(name="name", type="text", placeholder="")
+        .form-group
+            label(for="Occupation") 職稱
+            br
+            input#Occupation(name="occupation", type="text", placeholder="")
+        .form-group
+            label(for="TelephoneNumber") 電話
+            br
+            input#TelephoneNumber(name="telephonenumber", type="text", placeholder="")
+        .form-group
+            label(for="MobileNumber") 手機
+            br
+            input#MobileNumber(name="mobilenumber", type="text", placeholder="09##-###-###")
+        .form-group
+            label(for="Email1") Email
+            br
+            input#Email(name="email", type="email", placeholder="#####@#####.com") 
+        .form-group
+            label(for="Address") 聯絡地址
+            br
+            input#address(type="text",name="address")
+        .form-group
+            label(for="group") 服務組別(請依志願序填寫，1為第一志願，2為第二志願，以此類推，請至少填寫6個以上志願以利排班)
+            br
+            | 志工服務組(聯合服務台): 
+            select(name="group1")
+                option(value="") 請至少填寫6個以上志願
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+                option(value="5") 5
+                option(value="6") 6
+                option(value="7") 7
+                option(value="8") 8
+                option(value="9") 9
+                option(value="10") 10
+            br
+            | 環保組(環境保護局): 
+            select(name="group2")
+                option(value="") 請至少填寫6個以上志願
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+                option(value="5") 5
+                option(value="6") 6
+                option(value="7") 7
+                option(value="8") 8
+                option(value="9") 9
+                option(value="10") 10
+            br
+            | 交通運輸組(建設處): 
+            select(name="group3")
+                option(value="") 請至少填寫6個以上志願
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+                option(value="5") 5
+                option(value="6") 6
+                option(value="7") 7
+                option(value="8") 8
+                option(value="9") 9
+                option(value="10") 10
+            br
+            | 行政協調組(行政處): 
+            select(name="group4")
+                option(value="") 請至少填寫6個以上志願
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+                option(value="5") 5
+                option(value="6") 6
+                option(value="7") 7
+                option(value="8") 8
+                option(value="9") 9
+                option(value="10") 10
+            br
+            | 燈區服務(民政處): 
+            select(name="group5")
+                option(value="") 請至少填寫6個以上志願
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+                option(value="5") 5
+                option(value="6") 6
+                option(value="7") 7
+                option(value="8") 8
+                option(value="9") 9
+                option(value="10") 10
+            br
+            | 宣傳行銷組(新聞行銷處): 
+            select(name="group6")
+                option(value="") 請至少填寫6個以上志願
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+                option(value="5") 5
+                option(value="6") 6
+                option(value="7") 7
+                option(value="8") 8
+                option(value="9") 9
+                option(value="10") 10
+            br
+            | 醫療救護組/菸害防制(衛生局): 
+            select(name="group7")
+                option(value="") 請至少填寫6個以上志願
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+                option(value="5") 5
+                option(value="6") 6
+                option(value="7") 7
+                option(value="8") 8
+                option(value="9") 9
+                option(value="10") 10
+            br
+            | 在地特色燈區組 (文化觀光局): 
+            select(name="group8")
+                option(value="") 請至少填寫6個以上志願
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+                option(value="5") 5
+                option(value="6") 6
+                option(value="7") 7
+                option(value="8") 8
+                option(value="9") 9
+                option(value="10") 10
+            br
+            | 節目表演組(表藝中心): 
+            select(name="group9")
+                option(value="") 請至少填寫6個以上志願
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+                option(value="5") 5
+                option(value="6") 6
+                option(value="7") 7
+                option(value="8") 8
+                option(value="9") 9
+                option(value="10") 10
+            br
+            | 科技資訊組(綜規處): 
+            select(name="group10")
+                option(value="") 請至少填寫6個以上志願
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+                option(value="5") 5
+                option(value="6") 6
+                option(value="7") 7
+                option(value="8") 8
+                option(value="9") 9
+                option(value="10") 10
+        .form-group
+            label(for="Dates") 可服務天數(請務必填選)
+            p
+            select(name="dates")
+                option(value="") 請務必填選
+                option(value="1") 1-3天
+                option(value="2") 4-6天
+                option(value="3") 7-10天
+                option(value="4") 10天以上
+                option(value="5") 每天都可
+        .form-group
+            label 時段(請務必填選)
+            .form-group
+                |  早班：09：00～14：00（5小時）
+                input(type="checkbox", name="time", value="1")
+                br
+                |  午班：13：30～18：30（5小時）
+                input(type="checkbox", name="time", value="2")
+                br
+                |  晚班：18：00～23：00（5小時）
+                input(type="checkbox", name="time", value="3")
+        .form-group
+            label 時間(請務必填選)
+            .form-group
+                |  平日
+                input(type="checkbox", name="day", value="1")
+                br
+                |  假日
+                input(type="checkbox", name="day", value="0")
+        .form-group
+            label(for="People") 志工人數（至少20位，每位志工至少服務4班次）
+            br
+            input#People(name="people", type="text", placeholder="")
+        button.btn.btn-default(type="submit") 提交
