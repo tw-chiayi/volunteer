@@ -1,9 +1,20 @@
 var express = require('express');
+var multer = require('multer');
 var router = express.Router();
 var TITLE = "2017 燈會志工系統";
+var storage = multer.diskStorage({
+  destination: function (request, file, callback) {
+    callback(null, '/example/uploads');
+  },
+  filename: function (request, file, callback) {
+    console.log(file);
+    callback(null, file.originalname)
+  }
+});
+
+var upload = multer({storage: storage}).single('xls');
 
 var model = require("./../model/volunteer");
-
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -16,6 +27,22 @@ router.get("/join",(req,res,next)=>{
 
 router.get("/join/group",(req,res,next)=>{
   res.render('join_group', { title: '團體報名 | 加入志工 | ' + TITLE });
+});
+
+router.post('/group/join/csv', function(request, response) {
+  upload(request, response, function(err) {
+  if(err) {
+    console.log('Error Occured');
+    return;
+  }
+  console.log(request.file);
+  response.end('Your File Uploaded');
+  console.log('Photo Uploaded');
+  })
+});
+
+router.get("/join/group/csv",(req,res,next)=>{
+  res.render('join_group_csv', { title: 'xls表單' + TITLE });
 });
 
 router.post("/join/group_submiting",(req,res,next)=>{
