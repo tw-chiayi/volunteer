@@ -4,7 +4,7 @@ var router = express.Router();
 var TITLE = "2017 燈會志工系統";
 var storage = multer.diskStorage({
   destination: function (request, file, callback) {
-    callback(null, '/example/uploads');
+    callback(null, '/join/group/csv');
   },
   filename: function (request, file, callback) {
     console.log(file);
