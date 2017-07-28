@@ -1,11 +1,12 @@
+var XLSX = require('xlsx');
 var express = require('express');
 var multer = require('multer');
 var router = express.Router();
 var TITLE = "2017 燈會志工系統";
 var storage = multer.diskStorage({
-  destination: function (request, file, callback) {
-    callback(null, '/join/group/csv');
-  },
+  //destination: function (request, file, callback) {
+   // callback(null);
+  //},
   filename: function (request, file, callback) {
     console.log(file);
     callback(null, file.originalname)
@@ -29,7 +30,20 @@ router.get("/join/group",(req,res,next)=>{
   res.render('join_group', { title: '團體報名 | 加入志工 | ' + TITLE });
 });
 
-router.post('/group/join/csv', function(request, response) {
+router.get("/read/excel",(req,res,next)=>{
+  const workbook = XLSX.readFile('fake.xlsx');
+  const sheetNames = workbook.SheetNames;
+  const worksheet = workbook.Sheets[sheetNames[0]];
+  let a1 = worksheet['A2'];
+  let a2 = worksheet['B2'];
+  let a3 = worksheet['C2'];
+  let a4 = worksheet['D2'];
+  let a5 = worksheet['E2'];
+  console.log(a1.v,a2.v,a3.v,a4.v,a5.v);
+  res.render('read_excel', { title: '讀xls' + TITLE });
+});
+
+router.post('/join/group/csv', function(request, response) {
   upload(request, response, function(err) {
   if(err) {
     console.log('Error Occured');
