@@ -10,6 +10,9 @@ module.exports = {
     return knex("form_join").insert(data).then(build);},
     
     insert_group_item(data){
-    return knex("form_join_group").insert(data).then(build);
+    return knex("form_join_group").insert(data).then(build);},
+
+    insert_group_item(data){
+    return knex("read_excel").insert(data).then(build);
   }
 };

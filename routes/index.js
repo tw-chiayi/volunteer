@@ -39,7 +39,7 @@ router.get("/read/excel",(req,res,next)=>{
   let a3 = worksheet['C2'];
   let a4 = worksheet['D2'];
   let a5 = worksheet['E2'];
-  console.log(a1.v,a2.v,a3.v,a4.v,a5.v);
+  console.log(a1.v,a2.v,a3.w,a4.v,a5.v);
   res.render('read_excel', { title: '讀xls' + TITLE });
 });
 
@@ -53,6 +53,21 @@ router.post('/join/group/csv', function(request, response) {
   response.end('Your File Uploaded');
   console.log('Photo Uploaded');
   })
+  
+  var { name,birthday,identify,mobilenumber} = req.body;
+
+  console.log([ name,birthday,identify,mobilenumber]);
+
+  model.insert_item({
+      name:name,
+      birthday:birthday,
+      identify:identify,
+      mobilenumber:mobilenumber,
+  }).then(()=>{},(err)=>{
+    console.log(err);
+  });
+
+  res.send("送出完成:"+name);
 });
 
 router.get("/join/group/csv",(req,res,next)=>{
@@ -199,3 +214,4 @@ router.post("/join/single_submiting",(req,res,next)=>{
 });
 
 module.exports = router;
+
